@@ -16,8 +16,6 @@ import org.fabryprog.iota.iri.utils.Converter;
  *
  */
 public class MerkleTree {
-	public static final Integer HASH_LENGTH = 243;
-
 	private MerkleNodeInterface root;
 	
 	// Hash -> Hash

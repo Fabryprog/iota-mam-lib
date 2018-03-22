@@ -4,6 +4,7 @@
 package org.fabryprog.iota.mam.merkle;
 
 import org.fabryprog.iota.iri.hash.Curl;
+import org.fabryprog.iota.mam.utils.CurlUtils;
 
 /**
  * @author fabryprog
@@ -17,7 +18,7 @@ public class Node implements MerkleNodeInterface {
 	public Node(MerkleNodeInterface left, MerkleNodeInterface right, Curl curl) {
 	    this.left = left;
 	    this.right = right == null ? left : right;
-	    this.hash = Utils.combineHashes(this.left.getHash(), this.right.getHash());
+	    this.hash = CurlUtils.combineHashes(this.left.getHash(), this.right.getHash());
 	};
 	
 	public Integer getSize() {
